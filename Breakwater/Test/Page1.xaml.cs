@@ -25,6 +25,7 @@ namespace Breakwater.Test
             InitializeComponent();
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             textbox1.Text = "Button has been clicked";

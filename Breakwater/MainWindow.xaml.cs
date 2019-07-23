@@ -28,16 +28,7 @@ namespace Breakwater
         Uri uri1 = null;
         private void ArmStaticTrv_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (uri1 == null)
-            {
-                uri1 = new Uri("Test/Page1.xaml", UriKind.Relative);
-                frame1.Navigate(uri1);
-            }
-            else
-            {
-                frame1.Navigate(uri1);
-            }            
-
+            frame1.Navigate(new Uri("Test/Page1.xaml", UriKind.Relative));
         }
 
         private void ArmBermTrv_MouseDoubleClick(object sender, MouseButtonEventArgs e)
