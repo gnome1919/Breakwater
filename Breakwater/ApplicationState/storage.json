@@ -1,3 +1,5 @@
 {
-  "TextboxValue": "Button has been clicked"
+  "TextboxValue": "Button has been clicked",
+  "ButtonTitle": "Click Me!",
+  "Array": [1,2,3],
 }

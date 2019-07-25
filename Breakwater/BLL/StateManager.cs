@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using System;
 using System.IO;
-using System.Windows;
 
 namespace Breakwater.BLL
 {
@@ -10,10 +9,10 @@ namespace Breakwater.BLL
     {
         private const string storageFile = "ApplicationState\\storage.json";
 
-        public static void SetState(FirstPage state)
+        public static void SetState(FirstPage firstPage)
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, storageFile);
-            var newState = JsonConvert.SerializeObject(state);
+            var newState = JsonConvert.SerializeObject(firstPage);
             using (var writer = new StreamWriter(path))
             {
                 writer.Write(newState);

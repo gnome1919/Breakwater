@@ -21,7 +21,8 @@ namespace Breakwater.Test
     /// </summary>
     public partial class Page1 : Page
     {
-        FirstPage _firstPage;
+        private FirstPage _firstPage;
+
         public Page1()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace Breakwater.Test
         private void initComponentStates()
         {
             textbox1.Text = _firstPage.TextboxValue;
+            btnClickMe.Content = _firstPage.ButtonTitle;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
