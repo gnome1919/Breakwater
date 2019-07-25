@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Breakwater.DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,23 @@ namespace Breakwater.Test
     /// </summary>
     public partial class Page1 : Page
     {
+        FirstPage _firstPage;
         public Page1()
         {
             InitializeComponent();
+            _firstPage = BLL.StateManager.GetState();
+            this.DataContext = _firstPage;
         }
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            textbox1.Text = "Button has been clicked";
+            textbox1.Text = _firstPage.TextboxValue;
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            BLL.StateManager.SetState(_firstPage);
         }
     }
 }
