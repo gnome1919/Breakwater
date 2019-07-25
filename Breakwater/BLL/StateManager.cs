@@ -2,22 +2,19 @@
 using Newtonsoft.Json;
 using System;
 using System.IO;
-using System.Reflection;
 using System.Windows;
-using System.Windows.Resources;
 
 namespace Breakwater.BLL
 {
     public static class StateManager
     {
-        private const string storageFile = "/ApplicationState/storage.json";
+        private const string storageFile = "ApplicationState\\storage.json";
 
         public static void SetState(FirstPage state)
         {
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, storageFile);
             var newState = JsonConvert.SerializeObject(state);
-            var uri = new Uri(storageFile, UriKind.Relative);
-            var info = Application.GetResourceStream(uri);
-            using (var writer = new StreamWriter(info.Stream))
+            using (var writer = new StreamWriter(path))
             {
                 writer.Write(newState);
             }
@@ -26,9 +23,7 @@ namespace Breakwater.BLL
         public static FirstPage GetState()
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, storageFile);
-            var uri = new Uri("pack://application:,,,/ApplicationState/storage.json");
-            var info = Application.GetResourceStream(uri);
-            using (var reader = new StreamReader(info.Stream))
+            using (var reader = new StreamReader(path))
             {
                 var states = reader.ReadToEnd();
                 var firstPage = JsonConvert.DeserializeObject<FirstPage>(states);

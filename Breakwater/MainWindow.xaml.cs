@@ -25,7 +25,6 @@ namespace Breakwater
             InitializeComponent();
         }
 
-        Uri uri1 = null;
         private void ArmStaticTrv_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             frame1.Navigate(new Uri("Test/Page1.xaml", UriKind.Relative));

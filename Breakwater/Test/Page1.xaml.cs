@@ -27,8 +27,14 @@ namespace Breakwater.Test
             InitializeComponent();
             _firstPage = BLL.StateManager.GetState();
             this.DataContext = _firstPage;
+
+            initComponentStates();
         }
 
+        private void initComponentStates()
+        {
+            textbox1.Text = _firstPage.TextboxValue;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +43,7 @@ namespace Breakwater.Test
 
         private void Page_Unloaded(object sender, RoutedEventArgs e)
         {
+            _firstPage.TextboxValue = textbox1.Text;
             BLL.StateManager.SetState(_firstPage);
         }
     }
