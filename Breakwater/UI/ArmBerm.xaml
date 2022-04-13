@@ -1,0 +1,499 @@
+﻿<Page x:Class="Breakwater.UI.ArmBerm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Breakwater.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="900"
+      Title="BermStatic" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="900">
+            <TabItem Header="Main">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="280"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="50" TextAlignment="Center" Grid.Row="0" Text="Inputs:" FontStyle="Italic" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1">
+                        H<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">p</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6">
+                        P<Run BaselineAlignment="Subscript" FontSize="10">r</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="8">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">100</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="9">
+                        N<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="10" Text="d"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="11">
+                        d<Run BaselineAlignment="Subscript" FontSize="10">b</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="12">
+                        cot(α<Run BaselineAlignment="Subscript" FontSize="10">d</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="13" Text="β"/>
+                    <TextBox Name="ArmBrmMainHsTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainTmTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainTpTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainRhoSTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainRhoWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainPrTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainM0Txtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainM100Txtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainNWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="9" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainDTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="10" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainDbTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="11" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainCotTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="12" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainBetaTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="13" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Sig. Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="2" Text="Mean Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="3" Text="Peak Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="4" Grid.Column="2" >
+                        Mass Density of Rocks (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="5" Grid.Column="2" >
+                        Mass Density of Water (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="195" Grid.Row="6" Text="Fraction of Rounded Stones in Armor" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="195" Grid.Row="7" Text="Lower Limit for Mass of Rocks (kg)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="8" Text="Upper Limit for Mass of Rocks (kg)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="9" Text="Number of Waves" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="10" Text="Water Depth (m)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="11" Text="Water Depth Above Berm (m)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="12" Text="Armor Layer Slope" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="13" Text="Angle of Wave Attack (Degree)" Grid.Column="2" />
+
+                    <TextBlock HorizontalAlignment="Left" Margin="0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="26" Width="60" TextAlignment="Center" Grid.Row="0" Grid.Column="4" Text="Outputs:" FontStyle="Italic" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="4" Text="Δ"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="4" >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,15</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="4" >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="4" >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,85</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Grid.Column="4" >
+                        N<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6" Grid.Column="4" >
+                        T<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Grid.Column="4">
+                        f<Run BaselineAlignment="Subscript" FontSize="10">g</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Grid.Column="4">
+                        Rec <Run BaselineAlignment="Subscript" FontSize="10">HK</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="9" Grid.Column="4">
+                        Rec <Run BaselineAlignment="Subscript" FontSize="10">LB</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="10" Grid.Column="4">
+                        Rec <Run BaselineAlignment="Subscript" FontSize="10">VS</Run>
+                    </TextBlock>
+                    <TextBox Name="ArmBrmMainDeltaTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainDN15Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainDN50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainDN85Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainNSTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainT0Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainFGTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainRecHKTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainRecLBTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="9" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmMainRecVSTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="10" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="1" Text="Relative Density of Rocks" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="260" Grid.Row="2" Text="15% of Stones have Dia. Less than this Value (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="3" Text="50% of Stones have Dia. Less than this Value (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="4" Text="85% of Stones have Dia. Less than this Value (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="5" Text="Stability Number" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="6" Text="Spectral Mean Wave Period (s)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="7" Text="Gradation Factor" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="8" Text="Recession Width for HK (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="9" Text="Recession Width for LB (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="10" Text="Recession Width for VS (m)" Grid.Column="6"/>
+                    <GridSplitter Grid.Column="3" HorizontalAlignment="Center" Height="400" Grid.Row="1" Grid.RowSpan="13" VerticalAlignment="Top" Width="1" Background="#FF938B8B"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="LA &amp; Burchart">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="205" />
+                        <ColumnDefinition Width="55" />
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="50" TextAlignment="Center" Grid.Row="0" Text="Inputs:" FontStyle="Italic" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1">
+                        H<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">p</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6">
+                        P<Run BaselineAlignment="Subscript" FontSize="10">r</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="8">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">100</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="9">
+                        N<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="10" Text="d"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="11">
+                        d<Run BaselineAlignment="Subscript" FontSize="10">b</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="12">
+                        cot(α<Run BaselineAlignment="Subscript" FontSize="10">d</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="13" Text="β"/>
+                    <TextBox Name="ArmBrmLABHsTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABTmTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABTpTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABRhoSTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABRhoWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABPrTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABM0Txtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABM100Txtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABNWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="9" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABDTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="10" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABDbTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="11" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABCotTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="12" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmLABBetaTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="13" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Sig. Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="2" Text="Mean Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="3" Text="Peak Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="4" Grid.Column="2" >
+                        Mass Density of Rocks (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="5" Grid.Column="2" >
+                        Mass Density of Water (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="195" Grid.Row="6" Text="Fraction of Rounded Stones in Armor" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="195" Grid.Row="7" Text="Lower Limit for Mass of Rocks (kg)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="8" Text="Upper Limit for Mass of Rocks (kg)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="9" Text="Number of Waves" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="10" Text="Water Depth (m)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="11" Text="Water Depth Above Berm (m)" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="12" Text="Armor Layer Slope" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="13" Text="Angle of Wave Attack (Degree)" Grid.Column="2" />
+
+                    <TextBlock HorizontalAlignment="Left" Margin="10,2,0,2" TextWrapping="NoWrap" VerticalAlignment="Center" Height="26" Width="60" TextAlignment="Center" Grid.Row="0" Grid.Column="3" Text="Outputs:" FontStyle="Italic" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="3" Text="Δ" Margin="0,5" />
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="3" Margin="0,5"  >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,15</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="3" Margin="0,5" >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="3" Margin="0,5" >
+                        D<Run BaselineAlignment="Subscript" FontSize="10">n,85</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Grid.Column="3" Margin="0,5" >
+                        N<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6" Grid.Column="3" Margin="0,5" >
+                        T<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Grid.Column="3" Margin="0,5" >
+                        f<Run BaselineAlignment="Subscript" FontSize="10">g</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Grid.Column="3" Margin="2,7">
+                        L<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="9" Grid.Column="3" Margin="2,7">
+                        L<Run BaselineAlignment="Subscript" FontSize="10">p</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="10" Grid.Column="3" Margin="2,7">
+                        S<Run BaselineAlignment="Subscript" FontSize="10">0m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="11" Grid.Column="3" Margin="2,7">
+                        f<Run BaselineAlignment="Subscript" FontSize="10">grading</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="12" Grid.Column="3" Margin="2,7">
+                        u<Run BaselineAlignment="Subscript" FontSize="10">r</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="13" Grid.Column="3" Margin="2,7">
+                        b<Run BaselineAlignment="Subscript" FontSize="10">1</Run>
+                    </TextBlock>
+                    <TextBox Name="ArmBrmLABDeltaTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABDN15Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABDN50Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABDN85Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABNSTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABT0Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFGTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABL0Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABLPTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="9" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABS0MTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="10" MaxLength="6" />
+                    <TextBox Name="ArmBrm2LABFGradTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="11" MaxLength="6" />
+                    <TextBox Name="ArmBrm3LABURTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="12" MaxLength="6" />
+                    <TextBox Name="ArmBrm4LABB1Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="13" MaxLength="6" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="1" Text="Relative Density of Rocks" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="2" Text="15% of Stones have Dia. Less than this" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="3" Text="50% of Stones have Dia. Less than this" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="4" Text="85% of Stones have Dia. Less than this" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="5" Text="Stability Number" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="6" Text="Spectral Mean Wave Period (s)" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="7" Text="Gradation Factor" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="8" Text="Mean Wavelength (m)" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="9" Text="Peak Wavelength (m)" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="10" Text="" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="11" Text="" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="12" Text="" Grid.Column="5" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="205" Grid.Row="13" Text="" Grid.Column="5" Grid.ColumnSpan="2"/>
+
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="25" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="6" Margin="5,7,4,7">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">0</Run><Run BaselineAlignment="Superscript" FontSize="10">*</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="6" Margin="5,7,4,7">
+                        f(<Run BaselineAlignment="Subscript" FontSize="10">H0</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="6" Margin="3,7,2,7">
+                        f<Run BaselineAlignment="Subscript" FontSize="10">skewness</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="6" Margin="5,7,4,7">
+                        d<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Grid.Column="6" Margin="5,7,4,7">
+                        f(<Run BaselineAlignment="Subscript" FontSize="10">β</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="6" Grid.Column="6" Margin="5,7,4,7">
+                        f(<Run BaselineAlignment="Subscript" FontSize="10">Nw</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Grid.Column="6" Margin="5,7,4,7">
+                        f<Run BaselineAlignment="Subscript" FontSize="10">db</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Grid.Column="6" Margin="5,7,4,7">
+                        Rec <Run BaselineAlignment="Subscript" FontSize="10">LB</Run>
+                    </TextBlock>
+
+                    <TextBox Name="ArmBrmLABT0StarTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFH0Txtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFSkewTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABDSTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFBetaTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFNWTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABFDBTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" />
+                    <TextBox Name="ArmBrmLABRecLBTxtbx" Grid.Column="7" HorizontalAlignment="Center" Height="22" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" />
+                    <TextBlock HorizontalAlignment="Left" Margin="0,7" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="185" Grid.Row="1" Text="?" Grid.Column="8" />
+
+
+
+                    <GridSplitter Grid.Column="3" HorizontalAlignment="Left" Height="400" Grid.Row="1" Grid.RowSpan="14" VerticalAlignment="Top" Width="1" Background="#FF938B8B"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Etemad-Shahidi and Bali">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="6*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="280" />
+
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="50" TextAlignment="Center" Grid.Row="0" Text="Inputs:" FontStyle="Italic" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1" Text="H"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2">
+                        T<Run BaselineAlignment="Subscript" FontSize="10">m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Text="Cot(α)"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6">
+                        K<Run BaselineAlignment="Subscript" FontSize="10">D</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Text="S"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Text="P"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="9">
+                        N<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="10" Text="Δ"/>
+                    <TextBox Name="ArmBrmESBHTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBTmTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBRhoSTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBRhoWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBCotTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBKDTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBSTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBPTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBNWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="9" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBDeltaTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="10" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="2" Text="Mean Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="3" Grid.Column="2">
+                        Mass Density of Rocks (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="4" Grid.Column="2" >
+                        Mass Density of Water (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="5" Text="Armor Layer Slope" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="6" Text="Stability Coefficient" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="7" Text="Relative Eroded Area" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="8" Text="Notional Permeability" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="9" Text="Number of Waves" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="10" Text="Relative Density of Rocks" Grid.Column="2" />
+
+                    <TextBlock HorizontalAlignment="Left" Margin="0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="26" Width="60" TextAlignment="Center" Grid.Row="0" Grid.Column="4" Text="Outputs:" FontStyle="Italic" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="4" >
+                        L<Run BaselineAlignment="Subscript" FontSize="10">0m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="4" >
+                        S<Run BaselineAlignment="Subscript" FontSize="10">m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="4" >
+                        ξ<Run BaselineAlignment="Subscript" FontSize="10">m</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="4" >
+                        ξ<Run BaselineAlignment="Subscript" FontSize="10">m,c</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Grid.Column="4" >
+                        N<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6" Grid.Column="4" >
+                        H<Run BaselineAlignment="Subscript" FontSize="10">50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Grid.Column="4">
+                        D<Run BaselineAlignment="Subscript" FontSize="10">N,50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="4,5,6,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="46" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Grid.Column="4">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">50</Run>
+                    </TextBlock>
+                    <TextBox Name="ArmBrmESBOutL0mTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutSmTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutXimSTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutXimcTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutNsTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutH50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="6" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutDN50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="7" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ArmBrmESBOutM50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="8" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="1" Text="Deep Water Wavelength (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="2" Text="Wave Steepness" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="3" Text="Surf Similarity Parameter" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="4" Text="Critical Surf Similarity Parameter" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="5" Text="Stability Number" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="6" Text="Average of 50 Largest Waves in Wave Train (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="7" Text="Equivalent Cube Length of Medium Rock (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="16" Width="248" Grid.Row="8" Text="Medium Mass of Rocks (kg)" Grid.Column="6"/>
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="2" Text="Mean Wave Period (s)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="3" Grid.Column="2">
+                        Mass Density of Rocks (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="4" Grid.Column="2" >
+                        Mass Density of Water (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="5" Text="Armor Layer Slope" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="6" Text="Stability Coefficient" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="7" Text="Relative Eroded Area" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="8" Text="Notional Permeability" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="9" Text="Number of Waves" Grid.Column="2" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="10" Text="Relative Density of Rocks" Grid.Column="2" />
+                    <GridSplitter Grid.Column="3" HorizontalAlignment="Center" Height="300" Grid.Row="1" Grid.RowSpan="10" VerticalAlignment="Top" Width="1" Background="#FF938B8B"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

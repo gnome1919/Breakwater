@@ -11,8 +11,8 @@
         <Border BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Left" Height="525" Margin="10,10,0,0" VerticalAlignment="Top" Width="180"/>
         <TreeView HorizontalAlignment="Left" Height="505" Margin="20,20,0,0" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}">
             <TreeViewItem Header="Armor Design" IsExpanded="False">
-                <TreeViewItem Header="Static" Name="ArmStaticTrv" MouseDoubleClick="ArmStaticTrv_MouseDoubleClick" />
-                <TreeViewItem Header="Berm" Name="ArmBermTrv" MouseDoubleClick="ArmBermTrv_MouseDoubleClick" />
+                <TreeViewItem Header="Static" Name="ArmStaticTvw" MouseDoubleClick="ArmStaticTvw_MouseDoubleClick" />
+                <TreeViewItem Header="Berm" Name="ArmBermTvw" MouseDoubleClick="ArmBermTvw_MouseDoubleClick" />
             </TreeViewItem>
             <TreeViewItem Header="Filter Control" IsExpanded="False"/>
             <TreeViewItem Header="Toe Design" IsExpanded="False"/>
@@ -23,7 +23,7 @@
             <TreeViewItem Header="Runup Estimation" IsExpanded="False"/>
         </TreeView>
 
-        <Frame  Name="frame1" HorizontalAlignment="Left" Height="525" Margin="195,10,0,0" VerticalAlignment="Top" Width="811" Background="White" BorderThickness="0" NavigationUIVisibility="Hidden"/>
-        <Border BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Left" Height="525" Margin="195,10,0,0" VerticalAlignment="Top" Width="811"/>
+        <Frame  Name="MainFrame" HorizontalAlignment="Left" Height="525" Margin="195,10,0,0" VerticalAlignment="Top" Width="811" Background="White" BorderThickness="0" NavigationUIVisibility="Hidden"/>
+        <Border BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Left" Height="525" Margin="195,10,0,0" VerticalAlignment="Top" Width="810"/>
     </Grid>
 </Window>

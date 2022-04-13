@@ -1,0 +1,152 @@
+﻿<Page x:Class="Breakwater.UI.Toe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Breakwater.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="900"
+      Title="Page1">
+
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="900">
+            <TabItem Header="Main">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition Width="280"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="50" TextAlignment="Center" Grid.Row="0" Text="Inputs:" FontStyle="Italic" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="1">
+                        H<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">s</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3">
+                        ρ<Run BaselineAlignment="Subscript" FontSize="10">w</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Text="h"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5">
+                        N<Run BaselineAlignment="Subscript" FontSize="10">od</Run>
+                    </TextBlock>
+                    <TextBox Name="ToeMainHsTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="1" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ToeMainRhoSTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="2" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ToeMainRhoWTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="3" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ToeMainHTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="4" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBox Name="ToeMainNODTxtbx" Grid.Column="1" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="46" Grid.Row="5" MaxLength="6" Grid.RowSpan="1"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Sig. Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="2" Grid.Column="2">
+                        Mass Density of Rocks (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="180" Grid.Row="3" Grid.Column="2">
+                        Mass Density of Water (kg/m<Run BaselineAlignment="Superscript" FontSize="10">3</Run>)
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="1" Text="Design Sig. Wave Height (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="4" Text="Water Depth (m)" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="5" Text="Number of Units Displaced Out" Grid.Column="2" />
+
+                    <TextBlock HorizontalAlignment="Center" Margin="0,2" TextWrapping="NoWrap" VerticalAlignment="Center" Height="26" Width="60" TextAlignment="Center" Grid.Row="0" Grid.Column="3" Text="Outputs:" FontStyle="Italic" FontSize="16"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="90" TextAlignment="Center" Grid.Row="1" Grid.Column="4" Text="CEM Method" FontStyle="Italic" />
+                    <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="90" TextAlignment="Center" Grid.Row="1" Grid.Column="5" Text="Cur Method" FontStyle="Italic" />
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="2" Grid.Column="3" Text="Δ"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="3" Grid.Column="3">
+                        D<Run BaselineAlignment="Subscript" FontSize="10">N,50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="4" Grid.Column="3">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">50</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="5" Grid.Column="3">
+                        h<Run BaselineAlignment="Subscript" FontSize="10">t</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="6" Grid.Column="3">
+                        N<Run BaselineAlignment="Subscript" FontSize="10">S</Run>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="7" Grid.Column="3">
+                        h<Run BaselineAlignment="Subscript" FontSize="10">t</Run>/h
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="8" Grid.Column="3">
+                        H<Run BaselineAlignment="Subscript" FontSize="10">S</Run>/h
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="9" Grid.Column="3">
+                        h<Run BaselineAlignment="Subscript" FontSize="10">t</Run>/D<Run BaselineAlignment="Subscript" FontSize="10">n,50</Run>
+                    </TextBlock>
+
+                    <TextBox Name="ToeMainCEMDeltaTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="2" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMDN50Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="3" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMM50Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="4" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMHTTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="5" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMNSTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="6" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMHTH6Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="7" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMHSHTxtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="8" MaxLength="6"/>
+                    <TextBox Name="ToeMainCEMHTDN50Txtbx" Grid.Column="4" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="9" MaxLength="6"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Left" Height="20" Width="180" Grid.Row="2" Text="Relative Density of Rocks" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Left" Height="20" Width="240" Grid.Row="3" Text="Equivalent Cube Length of Medium Rock (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Left" Height="20" Width="180" Grid.Row="4" Text="Medium Mass of Rocks (kg)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Left" Height="20" Width="180" Grid.Row="5" Text="Water Depth at Top of Toe (m)" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5" TextAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="6" Text="Stability Number" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="7" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="8" Grid.Column="6"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,5" TextAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="180" Grid.Row="9"  Grid.Column="6"/>
+
+                    <TextBox Name="ToeMainCURDeltaTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="2" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURDN50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="3" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURM50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="4" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURHTTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="5" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURNSTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="6" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURHTH6Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="7" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURHSHTxtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="8" MaxLength="6"/>
+                    <TextBox Name="ToeMainCURHTDN50Txtbx" Grid.Column="5" HorizontalAlignment="Center" Height="22" Margin="2,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="65" Grid.Row="9" MaxLength="6"/>
+
+                    <GridSplitter Grid.Column="3" HorizontalAlignment="Left" Height="300" Grid.Row="1" Grid.RowSpan="10" VerticalAlignment="Top" Width="1" Background="#FF938B8B"/>
+                    <GridSplitter Grid.Column="4" HorizontalAlignment="Left" Height="820" Margin="15,-68,0,-255" VerticalAlignment="Top" Width="1" Grid.RowSpan="14" RenderTransformOrigin="0.5,0.5" Background="#FF938B8B">
+                        <GridSplitter.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </GridSplitter.RenderTransform>
+                    </GridSplitter>
+                    <TextBlock HorizontalAlignment="left" TextWrapping="NoWrap" VerticalAlignment="Center" Height="30" Width="100" TextAlignment="Center" Grid.Row="11" Grid.Column="2" Text="Design Values:" FontStyle="Italic" FontSize="16" Margin="0,20,0,0"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="0,5,25,5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="12" Grid.Column="2">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">0</Run>
+                    </TextBlock>
+                    <TextBox Name="ToeMainUserM0Txtbx" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="155,4,0,4" TextWrapping="NoWrap" VerticalAlignment="Center" Width="68" Grid.Row="12" Grid.ColumnSpan="2" MaxLength="6"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="12" Grid.Column="3">
+                        M<Run BaselineAlignment="Subscript" FontSize="10">100</Run>
+                    </TextBlock>
+                    <TextBox Name="ToeMainUserM100Txtbx" Grid.Column="4" HorizontalAlignment="Left" Height="22" Margin="0,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="68" Grid.Row="12" Grid.ColumnSpan="2" MaxLength="6"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="5" TextWrapping="NoWrap" VerticalAlignment="Center" Height="20" Width="50" TextAlignment="Center" FontWeight="Bold" Grid.Row="12" Grid.Column="5">
+                        D<Run BaselineAlignment="Subscript" FontSize="10">N,50</Run>
+                    </TextBlock>
+                    <TextBox Name="ToeMainUserDN50Txtbx" Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="0,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Width="68" Grid.Row="12" MaxLength="6"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

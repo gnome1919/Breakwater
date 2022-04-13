@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Breakwater
+namespace Breakwater.UI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void ArmStaticTvw_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            MainFrame.Navigate(new Uri("UI/ArmStatic.xaml", UriKind.Relative));
-        }
-
-        private void ArmBermTvw_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-         
         }
     }
 }
